@@ -1,4 +1,4 @@
-# dream-menu (opis)
+# dream-menu (description)
 
 Small framework to creating inventories in a simple way.
 
