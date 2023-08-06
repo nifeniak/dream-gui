@@ -1,6 +1,6 @@
 package cc.dreamcode.gui.framework.menu;
 
-import cc.dreamcode.gui.framework.DreamGui;
+import cc.dreamcode.gui.framework.Dream;
 import lombok.Getter;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
@@ -102,7 +102,7 @@ public class DreamPaginatedMenu {
                     .replace("{PAGE}", String.valueOf(this.pagesByMenus.get(dreamMenu) + 1))
                     .replace("{MAX_PAGE}", String.valueOf(this.menusByPages.size()));
 
-            dreamMenu.updateTitle(DreamGui.textFormatter().parse(titleString));
+            dreamMenu.updateTitle(Dream.textFormatter().parse(titleString));
 
         }
 

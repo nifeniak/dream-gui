@@ -1,6 +1,6 @@
 package cc.dreamcode.gui.framework.menu;
 
-import cc.dreamcode.gui.framework.DreamGui;
+import cc.dreamcode.gui.framework.Dream;
 import net.kyori.adventure.text.Component;
 import org.jetbrains.annotations.NotNull;
 
@@ -16,7 +16,7 @@ public final class DreamMenuBuilder {
     }
 
     public DreamMenuBuilder title(@NotNull String title) {
-        this.title = DreamGui.textFormatter().parse(title);
+        this.title = Dream.textFormatter().parse(title);
         return this;
     }
 

@@ -7,7 +7,7 @@ Small framework to creating inventories in a simple way.
 With MiniMessage:
 
 ```
-DreamGui.register(yourPluginInstance, new MiniMessageTextFormatter());
+Dream.register(yourPluginInstance, new MiniMessageTextFormatter());
 ```
 
 With legacy:
@@ -19,7 +19,7 @@ Dream.register(yourPluginInstance, new LegacyTextFormatter());
 #### Classic menu (building)
 
 ```
-        DreamMenu dreamMenu = DreamGui.classic()
+        DreamMenu dreamMenu = Dream.classic()
                 .rows(6)
                 .title("&cExample Menu")
                 .disableInteractions()
@@ -42,8 +42,8 @@ Dream.register(yourPluginInstance, new LegacyTextFormatter());
 #### Paginated menu (building)
 
 ```
-        DreamPaginatedMenu dreamPaginatedMenu = DreamGui.paginated()
-                .template(DreamGui.classic()
+        DreamPaginatedMenu dreamPaginatedMenu = Dream.paginated()
+                .template(Dream.classic()
                         .title("&cPage: &7{PAGE}&8/&7{MAX_PAGE}")
                         .rows(6)
                         .disableInteractions()
@@ -61,7 +61,7 @@ Dream.register(yourPluginInstance, new LegacyTextFormatter());
         dreamPaginatedMenu.nextPage(51, new ItemStack(Material.STONE_BUTTON));
 
 
-        List<String> formattedLore = DreamGui.textBuilder()
+        List<String> formattedLore = Dream.textBuilder()
                 .text(
                         "&cAmazing text builder!",
                         "&aYour placeholder here: &b{EXAMPLE_PLACEHOLDER}"
@@ -72,7 +72,7 @@ Dream.register(yourPluginInstance, new LegacyTextFormatter());
         for (int i = 0; i < 40; i++) {
             dreamPaginatedMenu.addItem(DreamItemBuilder.of(Material.COBBLESTONE)
                     .lore(formattedLore)
-                    .buildAsDream(event -> player.sendMessage(DreamGui.textFormatter().parse("&7Cobblestone"))));
+                    .buildAsDream(event -> player.sendMessage(Dream.textFormatter().parse("&7Cobblestone"))));
         }
 
         dreamPaginatedMenu.open(player);

@@ -1,6 +1,6 @@
 package cc.dreamcode.gui.framework.menu;
 
-import cc.dreamcode.gui.framework.DreamGui;
+import cc.dreamcode.gui.framework.Dream;
 import net.kyori.adventure.text.Component;
 import org.jetbrains.annotations.NotNull;
 
@@ -25,12 +25,12 @@ public class DreamPaginatedMenuBuilder {
     }
 
     public DreamPaginatedMenuBuilder nextPageDoesNotExistMessage(@NotNull String nextPageDoesNotExist) {
-        this.nextPageDoesNotExist = DreamGui.textFormatter().parse(nextPageDoesNotExist);
+        this.nextPageDoesNotExist = Dream.textFormatter().parse(nextPageDoesNotExist);
         return this;
     }
 
     public DreamPaginatedMenuBuilder previousPageDoesNotExistMessage(@NotNull String previousPageDoesNotExist) {
-        this.previousPageDoesNotExist = DreamGui.textFormatter().parse(previousPageDoesNotExist);
+        this.previousPageDoesNotExist = Dream.textFormatter().parse(previousPageDoesNotExist);
         return this;
     }
 

@@ -10,7 +10,7 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.jetbrains.annotations.NotNull;
 
-public class DreamGui {
+public class Dream {
 
     private static DreamTextFormatter DREAM_TEXT_FORMATTER;
 
